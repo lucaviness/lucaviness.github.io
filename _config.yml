@@ -126,7 +126,7 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/lucaviness/"
     - label: "Newsletter"
-      icon: "fab fa-fw fa-newspaper"
+      icon: "fab fa-solid fa-newspaper"
       url: "https://lucandjeremi.substack.com/"
 
 
@@ -137,8 +137,8 @@ footer:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/lucaviness/"
     - label: "Newsletter"
-      icon: "fab fa-fw fa-newspaper"
-      URL: "https://lucandjeremi.substack.com/"
+      icon: "fab fa-solid fa-newspaper"
+      url: "https://lucandjeremi.substack.com/"
 
 
 # Reading Files
