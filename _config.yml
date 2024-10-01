@@ -117,7 +117,7 @@ author:
   avatar           : "/assets/images/headshot.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Private pilot studying operations research and public policy at Cal"
   location         : "Berkeley, CA"
-  email            : "lucacaviness@gmail.com"
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
