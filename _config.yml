@@ -126,7 +126,7 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/lucaviness/"
     - label: "Newsletter"
-      icon: "fab fa-solid fa-newspaper"
+      icon: "fab fa-fw fa-newspaper"
       url: "https://lucandjeremi.substack.com/"
 
 
@@ -137,7 +137,7 @@ footer:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/lucaviness/"
     - label: "Newsletter"
-      icon: "fab fa-solid fa-newspaper"
+      icon: "fab fa-fw fa-newspaper"
       url: "https://lucandjeremi.substack.com/"
 
 
