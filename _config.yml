@@ -148,7 +148,7 @@ footer:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/lucaviness/"
     - label: "Newsletter"
-      icon: "fa-solid fa-newspaper"
+      icon: "fab fa-fw fa-newspaper"
       URL: "https://lucandjeremi.substack.com/"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
