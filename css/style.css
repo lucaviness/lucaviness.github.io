@@ -220,7 +220,7 @@ a:hover::after {
   border-radius: 5px 0 0 5px;
   outline: none;
   box-sizing: border-box;
-  min-width: 0; /* Ensures flexible sizing */
+  min-width: 0;
 }
 
 .subscribe-button {
