@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding: 2rem 1.5rem 2rem 2.5rem;
-  margin-left: 150px;
+  margin-left: 200px; /* 150px when I have more content */
   margin-top: 25px;
   max-width: 860px;
   margin: 0 auto;

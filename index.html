@@ -56,20 +56,9 @@
 </section>
 
 <!--
-<form id="subscribeForm" action="https://lucandjeremi.substack.com/api/v1/free" method="POST">
-    <input
-        type="email"
-        name="email"
-        placeholder="Email address"
-        required
-        class="subscribe-input"
-    />
-    <button type="submit" class="subscribe-button">Subscribe</button>
-</form>
--->
-
 <br>
 <iframe src="https://lucandjeremi.substack.com/embed" width="100%" height="160" style="border:0px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+-->
 
 <!-- <div id="custom-substack-embed"></div> -->
 </main>
@@ -108,34 +97,6 @@
     };
 </script>
 <script src="https://substackapi.com/widget.js" async></script>
-
-<script>
-    document.getElementById('subscribeForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        
-        const email = document.querySelector('input[name="email"]').value;
-
-        fetch('https://lucandjeremi.substack.com/api/v1/free', {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-            email: email,
-            referrer: document.referrer,
-            }),
-        })
-            .then(response => {
-            if (response.ok) {
-                alert('Thank you for subscribing!');
-                document.getElementById('subscribeForm').reset();
-            } else {
-                alert('There was an error. Please try again.');
-            }
-            })
-            .catch(error => console.error('Error:', error));
-    });
-</script>
 
 </body>
 </html>
