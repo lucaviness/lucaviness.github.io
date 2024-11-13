@@ -187,10 +187,10 @@ a:hover::after {
     margin: 2rem 0 0.1rem;
   }
 
-  p {
+  /*p {
     font-size: 0.9rem;
     margin-top: 0.6rem;
-  }
+  }*/
 
   .headshot {
     width: 70px;
