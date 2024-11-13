@@ -135,3 +135,33 @@ a:hover::after {
   border-radius: 50%;
   margin-bottom: 5px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 2rem; /* Reduces padding on mobile */
+    margin-left: 0; /* Removes the left margin */
+  }
+
+  header h1 {
+    font-size: 2rem; /* Smaller header font on mobile */
+  }
+
+  header p {
+    font-size: 1rem; /* Smaller text for the header paragraph */
+  }
+
+  main {
+    max-width: 100%; /* Takes full width on small screens */
+    margin: 0 1rem; /* Adds some margin on the sides */
+  }
+
+  h2 {
+    font-size: 1.6rem; /* Slightly smaller subheading */
+  }
+
+  .headshot {
+    width: 120px; /* Smaller headshot image on mobile */
+    height: 120px; /* Smaller headshot image on mobile */
+  }
+}
