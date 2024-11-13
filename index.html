@@ -13,20 +13,30 @@
 <header>
     <img src="files/headshot.jpg" alt="Luca Caviness Headshot" class="headshot">
     <h1>Luca Caviness</h1>
-    <p>I'm a student, pilot, and founder.</p>
+    <p>I'm a student, pilot, and challenge seeker.</p>
 </header>
 
 <main>
-<section id="essays">
+<!-- <section id="essays">
     <h2>Essays</h2>
     <ul>
-        <li><a href="essay.html">Essay 1</a></li>
+        <li><a href="personal_statement.html">Personal Statement</a></li>
     </ul>
-</section>
+</section> -->
 
 <section id="newsletter">
     <h2>Latest newsletters</h2>
     <ul id="substack-posts"></ul>
+</section>
+
+<section id="internet">
+    <h2>Internet favorites</h2>
+    <ul>
+        <li><a href="https://www.nytimes.com/2024/06/06/opinion/elites-progressives-universities.html">The Sins of the Educated Class</a> — <em>a take on modern class dynamics</em></li>
+        <li><a href="https://paulgraham.com/greatwork.html">How To Do Great Work</a> — <em>the best of Paul Graham's essays</em></li>
+        <li><a href="https://www.youtube.com/watch?v=njpGH_IHjFg">Create More Value Than You Capture</a> — <em>Tim O'Reilly on ensuring continued business success</em></li>
+        <li><a href="https://users.ece.cmu.edu/~gamvrosi/thelastq.html">The Last Question</a> — <em>a moving (and telling) short story by Isaac Asimov</em></li>
+    </ul>
 </section>
 
 <section id="socials">
@@ -39,7 +49,29 @@
 
 <section id="story">
     <h2>My life so far...</h2>
+    <p><span class="highlight">ages 0-11:</span> Learned my ABCs and explored the neighborhood.</p>
+    <p><span class="highlight">ages 11-15:</span> Homeschooled, argued a lot, math obsession.</p>
+    <p><span class="highlight">ages 15-18:</span> Covid, got addicted to flight simulators, earned my pilot license.</p>
+    <p><span class="highlight">ages 18-19:</span> Going to school at Berkeley, more coming soon...</p>
 </section>
+
+<!--
+<form id="subscribeForm" action="https://lucandjeremi.substack.com/api/v1/free" method="POST">
+    <input
+        type="email"
+        name="email"
+        placeholder="Email address"
+        required
+        class="subscribe-input"
+    />
+    <button type="submit" class="subscribe-button">Subscribe</button>
+</form>
+-->
+
+<br>
+<iframe src="https://lucandjeremi.substack.com/embed" width="100%" height="160" style="border:0px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+
+<!-- <div id="custom-substack-embed"></div> -->
 </main>
 
 <script>
@@ -61,6 +93,49 @@
     fetchSubstackPosts();
 </script>
 
+<script>
+    window.CustomSubstackWidget = {
+      substackUrl: "lucandjeremi.substack.com",
+      placeholder: "Email address",
+      buttonText: "Subscribe",
+      theme: "custom",
+      colors: {
+        primary: "#000000",
+        input: "#FFFFFF",
+        email: "#000000",
+        text: "#FFFFFF",
+      },
+    };
+</script>
+<script src="https://substackapi.com/widget.js" async></script>
+
+<script>
+    document.getElementById('subscribeForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        const email = document.querySelector('input[name="email"]').value;
+
+        fetch('https://lucandjeremi.substack.com/api/v1/free', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+            email: email,
+            referrer: document.referrer,
+            }),
+        })
+            .then(response => {
+            if (response.ok) {
+                alert('Thank you for subscribing!');
+                document.getElementById('subscribeForm').reset();
+            } else {
+                alert('There was an error. Please try again.');
+            }
+            })
+            .catch(error => console.error('Error:', error));
+    });
+</script>
 
 </body>
 </html>
