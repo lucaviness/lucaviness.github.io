@@ -9,7 +9,6 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #f7f9fc;
-    line-height: 1.6;
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -18,7 +17,7 @@ body {
 /* Main Container */
 .container {
     max-width: 700px;
-    text-align: center;
+    text-align: left;
 }
 
 /* Section Styles */
@@ -27,15 +26,15 @@ body {
 }
 
 h1 {
-    font-size: 2.4em;
-    color: #0077cc;
-    margin-bottom: 20px;
+    font-size: 2.2em;
+    color: #000;
+    margin-bottom: 10px;
 }
 
 p {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 20px;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 15px;
 }
 
 /* Essays List */
@@ -49,41 +48,43 @@ p {
 }
 
 .essays-section a {
-    color: #0077cc;
+    color: #000;
     text-decoration: none;
-    font-size: 1.1em;
 }
 
 .essays-section a:hover {
-    color: #0056a3;
+    text-decoration: underline;
 }
 
 /* Newsletter Posts */
 #substack-posts {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .post h3 a {
-    color: #0077cc;
+    color: #000;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .post h3 a:hover {
-    color: #0056a3;
     text-decoration: underline;
 }
 
 .post p {
-    color: #555;
+    color: #333;
     margin-top: 5px;
 }
 
 /* Subscribe Section */
 .subscribe-section h3 {
-    font-size: 1.4em;
-    color: #333;
+    font-size: 1.2em;
+    color: #000;
     margin-bottom: 10px;
+}
+
+iframe {
+    border: none;
 }
