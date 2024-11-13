@@ -8,63 +8,70 @@
 </head>
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar">
-    <a href="index.html" class="name">Luca Caviness</a>
-    <div class="menu">
-        <a href="essays.html">Essays</a>
-        <a href="newsletter.html">Newsletter</a>
-        <a href="resume.html">Resume</a>
-    </div>
-</nav>
-
-<!-- Main Content -->
+<!-- Main Container -->
 <div class="container">
-    <img src="files/headshot.jpg" alt="Luca Caviness's Photo" class="profile-pic">
-    <h1>Luca Caviness</h1>
-    <p class="bio">Sophomore at UC Berkeley studying analytics with a minor in public policy. Passionate about strategy, aviation, and public policy.</p>
-    
-    <!-- Summary Section -->
-    <section>
-        <h2>Summary</h2>
-        <p>Student, strategy consultant, and pilot interested in economics, product management, finance, investment banking, public policy, and aviation.</p>
+
+    <!-- Header / Bio Section -->
+    <section class="bio-section">
+        <h1>Luca Caviness</h1>
+        <p>Sophomore at UC Berkeley studying analytics with a minor in public policy. Passionate about strategy, aviation, and public policy. Welcome to my personal space online where I share essays, thoughts, and updates.</p>
     </section>
 
-    <!-- Experience Section -->
-    <section>
-        <h2>Experience</h2>
+    <!-- Essays Section -->
+    <section class="section essays-section">
+        <h2>Essays</h2>
         <ul>
-            <li><strong>Boardy</strong> - Connector | Oct 2024 - Present | San Francisco Bay Area</li>
-            <li><strong>Dev.Pro</strong> - Copywriter & Process Specialist | Dec 2023 - Present | San Francisco Bay Area</li>
-            <li><strong>U.S. Department of Commerce</strong> - Intern | June 2024 - Aug 2024 | Washington, DC</li>
-            <!-- Add more roles as needed -->
+            <li><a href="essays/essay1.html">Essay Title 1</a></li>
+            <li><a href="essays/essay2.html">Essay Title 2</a></li>
+            <li><a href="essays/essay3.html">Essay Title 3</a></li>
+            <!-- Add more as needed -->
         </ul>
     </section>
 
-    <!-- Education Section -->
-    <section>
-        <h2>Education</h2>
-        <p><strong>University of California, Berkeley</strong> - B.A., Analytics | 2023 - 2027</p>
-        <p><strong>University of California, Berkeley, Goldman School of Public Policy</strong> - Minor, Public Policy | 2023 - 2027</p>
+    <!-- Newsletter Section -->
+    <section class="section newsletter-section">
+        <h2>Newsletter</h2>
+        <p>Check out my latest posts and subscribe to get updates directly in your inbox!</p>
+
+        <!-- Recent Posts -->
+        <div id="substack-posts"></div>
     </section>
 
-    <!-- Certifications & Awards Section -->
-    <section>
-        <h2>Certifications & Awards</h2>
-        <ul>
-            <li>Private Pilot (ASEL)</li>
-            <li>California Boys State Delegate</li>
-            <li>AP Scholar with Distinction</li>
-            <!-- Add more as desired -->
-        </ul>
+    <!-- Subscribe Button -->
+    <section class="section subscribe-section">
+        <h3>Subscribe to My Newsletter</h3>
+        <iframe src="https://lucandjeremi.substack.com/embed" 
+                width="100%" 
+                height="120" 
+                style="border:1px solid #EEE; background:white;" 
+                frameborder="0" 
+                scrolling="no">
+        </iframe>
     </section>
 
-    <!-- Social Links -->
-    <div class="social-links">
-        <a href="https://www.linkedin.com/in/lucaviness" target="_blank">LinkedIn</a>
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-    </div>
 </div>
+
+<!-- JavaScript for Fetching Newsletter Posts -->
+<script>
+    async function fetchSubstackPosts() {
+        const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://lucandjeremi.substack.com/feed');
+        const data = await response.json();
+
+        const postsContainer = document.getElementById('substack-posts');
+        data.items.slice(0, 5).forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.className = 'post';
+            postElement.innerHTML = `
+                <h3><a href="${post.link}" target="_blank">${post.title}</a></h3>
+                <p><em>${new Date(post.pubDate).toLocaleDateString()}</em></p>
+                <p>${post.description.slice(0, 150)}...</p>
+            `;
+            postsContainer.appendChild(postElement);
+        });
+    }
+
+    fetchSubstackPosts();
+</script>
 
 </body>
 </html>
