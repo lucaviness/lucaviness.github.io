@@ -22,8 +22,6 @@
 <div class="container">
     <h1>Newsletter</h1>
     <p>Check out my latest posts and subscribe on Substack to get updates directly in your inbox!</p>
-    
-    <iframe src="https://lucandjeremi.substack.com/embed" width="480" height="320" style="border:0px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
     <!-- Dynamic Substack Post List -->
     <div id="substack-posts"></div>
@@ -40,7 +38,7 @@
             postElement.className = 'post';
             postElement.innerHTML = `
                 <h3><a href="${post.link}" target="_blank">${post.title}</a></h3>
-                <p>${post.pubDate}</p>
+                <p><em>${new Date(post.pubDate).toLocaleDateString()}</em></p>
                 <p>${post.description.slice(0, 150)}...</p>
             `;
             postsContainer.appendChild(postElement);
