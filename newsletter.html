@@ -28,7 +28,7 @@
         <iframe src="https://lucandjeremi.substack.com/embed" 
                 width="100%" 
                 height="320" 
-                style="border:1px solid #EEE; background:white;" 
+                style="border:0px solid #EEE; background:white;" 
                 frameborder="0" 
                 scrolling="no">
         </iframe>
@@ -51,6 +51,7 @@
             postElement.innerHTML = `
                 <h3><a href="${post.link}" target="_blank">${post.title}</a></h3>
                 <p><em>${new Date(post.pubDate).toLocaleDateString()}</em></p>
+                <p>${post.description.slice(0, 150)}</p>
             `;
             postsContainer.appendChild(postElement);
         });
