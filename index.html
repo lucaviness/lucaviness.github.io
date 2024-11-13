@@ -1,77 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luca Caviness</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luca Caviness</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <h1>Luca Caviness</h1>
+    <p>Exploring AI, aviation, and the future of training.</p>
+  </header>
 
-<!-- Main Container -->
-<div class="container">
-
-    <!-- Header / Bio Section -->
-    <section class="bio-section">
-        <h1>Luca Caviness</h1>
-        <p>Sophomore at UC Berkeley studying analytics with a minor in public policy. Passionate about strategy, aviation, and public policy. Welcome to my personal space online where I share essays, thoughts, and updates.</p>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi, I’m Luca Caviness, a private pilot and student at UC Berkeley. My work focuses on integrating AI and mixed reality to improve pilot training and industrial machinery control, starting with aviation.</p>
     </section>
 
-    <!-- Essays Section -->
-    <section class="section essays-section">
-        <h2>Essays</h2>
-        <ul>
-            <li><a href="essays/essay1.html">Essay Title 1</a></li>
-            <li><a href="essays/essay2.html">Essay Title 2</a></li>
-            <li><a href="essays/essay3.html">Essay Title 3</a></li>
-            <!-- Add more as needed -->
-        </ul>
+    <section id="newsletter">
+      <h2>Latest Newsletters</h2>
+      <ul>
+        <li><a href="#">How AI is Transforming Flight Training</a></li>
+        <li><a href="#">Philosophical vs. Immediate Voting Perspectives</a></li>
+        <!-- Add more links as needed -->
+      </ul>
     </section>
+  </main>
 
-    <!-- Newsletter Section -->
-    <section class="section newsletter-section">
-        <h2>Newsletter</h2>
-        <p>Check out my latest posts and subscribe to get updates directly in your inbox!</p>
-
-        <!-- Recent Posts -->
-        <div id="substack-posts"></div>
-    </section>
-
-    <!-- Subscribe Button -->
-    <section class="section subscribe-section">
-        <h3>Subscribe to My Newsletter</h3>
-        <iframe src="https://lucandjeremi.substack.com/embed" 
-                width="100%" 
-                height="120" 
-                style="border:none; background:white;" 
-                frameborder="0" 
-                scrolling="no">
-        </iframe>
-    </section>
-
-</div>
-
-<!-- JavaScript for Fetching Newsletter Posts -->
-<script>
-    async function fetchSubstackPosts() {
-        const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://lucandjeremi.substack.com/feed');
-        const data = await response.json();
-
-        const postsContainer = document.getElementById('substack-posts');
-        data.items.slice(0, 5).forEach(post => {
-            const postElement = document.createElement('div');
-            postElement.className = 'post';
-            postElement.innerHTML = `
-                <h3><a href="${post.link}" target="_blank">${post.title}</a></h3>
-                <p><em>${new Date(post.pubDate).toLocaleDateString()}</em></p>
-                <p>${post.description.slice(0, 150)}...</p>
-            `;
-            postsContainer.appendChild(postElement);
-        });
-    }
-
-    fetchSubstackPosts();
-</script>
-
+  <footer>
+    <p>&copy; 2024 Luca Caviness</p>
+  </footer>
 </body>
 </html>
