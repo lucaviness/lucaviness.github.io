@@ -7,9 +7,9 @@
 
 body {
   font-family: Georgia, serif;
-  font-weight: 10;
+  font-weight: 300;
   line-height: 1.6;
-  color: #000000;
+  color: #333333;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -28,7 +28,7 @@ header {
 
 header h1 {
   font-size: 2.3rem;
-  color: #000000;
+  color: #333333;
   margin-bottom: -0.75rem;
   font-weight: 100;
 }
@@ -46,9 +46,9 @@ main {
 }
 
 h2 {
-  color: #000000;
+  color: #333333;
   font-size: 1.2rem;
-  margin: 1.6rem 0 0.1rem;
+  margin: 1.8rem 0 0.1rem;
   font-weight: 550;
 }
 
@@ -69,7 +69,7 @@ section li {
 }
 
 section li a {
-  color: #000000;
+  color: #333333;
   text-decoration: none;
   position: relative;
   transition: color 0.3s;
@@ -97,7 +97,7 @@ section li a:hover::after {
 
 /* Links and Hover Effect */
 a {
-  color: #000000;
+  color: #333333;
   text-decoration: none;
   position: relative;
   transition: color 0.3s;
@@ -136,6 +136,7 @@ a:hover::after {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 /* Responsive Design */
@@ -171,11 +172,12 @@ a:hover::after {
 @media (max-width: 480px) {
   body {
     padding: 1rem;
+    font-size: 0.95rem;
   }
 
   header h1 {
     font-size: 1.5rem;
-    margin-bottom: -0.5rem;
+    margin-bottom: -0.65rem;
   }
 
   header p {
@@ -183,9 +185,15 @@ a:hover::after {
   }
 
   h2 {
-    font-size: 1rem;
-    margin: 2rem 0 0.1rem;
+    font-size: 1.12rem;
+    margin: 2rem 0 0.9rem;
   }
+
+  /* Set font-weight for h1 and h2 to ensure they look the same */
+  header h1, h2 {
+    font-weight: 500; /* Adjust as needed; 'normal' or '100' may also work */
+  }
+
 
   /*p {
     font-size: 0.9rem;
