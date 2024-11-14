@@ -123,6 +123,13 @@ a:hover::after {
   background-color: #4a90e2;
 }
 
+/* Reset the focus state */
+a:focus {
+  outline: none; /* Removes any default outline */
+  background-color: transparent; /* Ensures background is reset */
+  color: inherit; /* Resets the color */
+}
+
 /* Customize text selection */
 ::selection {
   background-color: #4a90e2;
