@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,75 +9,86 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/c7de4664b1.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    
-<header>
-    <img src="files/LUCA!.jpeg" alt="Luca Caviness Headshot" class="headshot">
-    <h1>Luca Caviness</h1>
-    <p>I'm a student, pilot, and challenge addict.</p>
-</header>
 
-<main>
-<!-- <section id="essays">
+<body>
+
+    <header>
+        <img src="files/Lucaviness Apr 2025.jpg" alt="Luca Caviness Headshot" class="headshot">
+        <h1>Luca Caviness</h1>
+        <p>I'm a student, pilot, and challenge addict.</p>
+    </header>
+
+    <main>
+        <!-- <section id="essays">
     <h2>Essays</h2>
     <ul>
         <li><a href="personal_statement.html">Personal Statement</a></li>
     </ul>
 </section> -->
 
-<section id="newsletter">
-    <h2>Latest newsletters</h2>
-    <ul id="substack-posts"></ul>
-</section>
+        <section id="newsletter">
+            <h2>Latest newsletters</h2>
+            <ul id="substack-posts"></ul>
+        </section>
 
-<section id="internet">
-    <h2>Internet favorites</h2>
-    <ul>
-        <li><a href="https://icaodle.github.io/icaodle/" target="_blank">icaodle.com</a> — <em>a "wordle for airport codes" game I built in high school (not mobile-friendly)</em></li>
-        <li><a href="https://www.nytimes.com/2024/06/06/opinion/elites-progressives-universities.html" target="_blank">The Sins of the Educated Class</a> — <em>an interesting take on modern class dynamics</em></li>
-        <li><a href="https://paulgraham.com/greatwork.html" target="_blank">How To Do Great Work</a> — <em>the best of Paul Graham's essays</em></li>
-        <li><a href="https://www.youtube.com/watch?v=njpGH_IHjFg" target="_blank">Create More Value Than You Capture</a> — <em>Tim O'Reilly on ensuring continued business success</em></li>
-        <li><a href="https://users.ece.cmu.edu/~gamvrosi/thelastq.html" target="_blank">The Last Question</a> — <em>a moving (and telling) short story by Isaac Asimov</em></li>
-    </ul>
-</section>
+        <section id="internet">
+            <h2>Internet favorites</h2>
+            <ul>
+                <li><a href="https://icaodle.github.io/icaodle/" target="_blank">icaodle.com</a> — <em>a "wordle for
+                        airport codes" game I built in high school (not mobile-friendly)</em></li>
+                <li><a href="https://www.nytimes.com/2024/06/06/opinion/elites-progressives-universities.html"
+                        target="_blank">The Sins of the Educated Class</a> — <em>an interesting take on modern class
+                        dynamics</em></li>
+                <li><a href="https://paulgraham.com/greatwork.html" target="_blank">How To Do Great Work</a> — <em>the
+                        best of Paul Graham's essays</em></li>
+                <li><a href="https://www.youtube.com/watch?v=njpGH_IHjFg" target="_blank">Create More Value Than You
+                        Capture</a> — <em>Tim O'Reilly on ensuring continued business success</em></li>
+                <li><a href="https://users.ece.cmu.edu/~gamvrosi/thelastq.html" target="_blank">The Last Question</a> —
+                    <em>a moving (and telling) short story by Isaac Asimov</em></li>
+            </ul>
+        </section>
 
-<section id="socials">
-    <h2>Socials</h2>
-    <p><a href="https://www.linkedin.com/in/lucaviness/" target="_blank">LinkedIn</a>
-        <a href="https://x.com/lucaviness" target="_blank">X</a>
-        <a href="https://www.instagram.com/lucaviness/" target="_blank">Instagram</a></p>
-    <p>Email me: <a href="mailto:lucacaviness@gmail.com">lucacaviness@gmail.com</a></p>
-</section>
+        <section id="socials">
+            <h2>Socials</h2>
+            <p><a href="https://www.linkedin.com/in/lucaviness/" target="_blank">LinkedIn</a>
+                <a href="https://x.com/lucaviness" target="_blank">X</a>
+                <a href="https://www.instagram.com/lucaviness/" target="_blank">Instagram</a>
+            </p>
+            <p>Email me: <a href="mailto:lucacaviness@gmail.com">lucacaviness@gmail.com</a></p>
+        </section>
 
-<section id="story">
-    <h2>My life so far...</h2>
-    <p><span class="highlight">ages 0-11:</span> Learned my ABCs and asked a lot of questions.</p>
-    <p><span class="highlight">ages 11-15:</span> Homeschooled, argued every chance I got, aggressively into math.</p>
-    <p><span class="highlight">ages 15-18:</span> Covid, got obsessed with flight simulators, earned my pilot license.</p>
-    <p><span class="highlight">ages 18-19:</span> Going to school at Berkeley, more to come...</p>
-</section>
+        <section id="story">
+            <h2>My life so far...</h2>
+            <p><span class="highlight">ages 0-11:</span> Learned my ABCs and asked a lot of questions.</p>
+            <p><span class="highlight">ages 11-15:</span> Homeschooled, argued every chance I got, aggressively into
+                math.</p>
+            <p><span class="highlight">ages 15-18:</span> Covid, got obsessed with flight simulators, earned my pilot
+                license.</p>
+            <p><span class="highlight">ages 18-19:</span> Going to school at Berkeley, more to come...</p>
+        </section>
 
-<br>
-</main>
+        <br>
+    </main>
 
-<script>
-    async function fetchSubstackPosts() {
-        const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://lucandjeremi.substack.com/feed');
-        const data = await response.json();
+    <script>
+        async function fetchSubstackPosts() {
+            const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://lucandjeremi.substack.com/feed');
+            const data = await response.json();
 
-        const postsContainer = document.getElementById('substack-posts');
-        data.items.slice(0, 7).forEach(post => {
-            const postElement = document.createElement('li');
-            postElement.className = 'post';
-            postElement.innerHTML = `
+            const postsContainer = document.getElementById('substack-posts');
+            data.items.slice(0, 7).forEach(post => {
+                const postElement = document.createElement('li');
+                postElement.className = 'post';
+                postElement.innerHTML = `
                 <a href="${post.link}" target="_blank">${post.title}</a>
             `;
-            postsContainer.appendChild(postElement);
-        });
-    }
+                postsContainer.appendChild(postElement);
+            });
+        }
 
-    fetchSubstackPosts();
-</script>
+        fetchSubstackPosts();
+    </script>
 
 </body>
+
 </html>
