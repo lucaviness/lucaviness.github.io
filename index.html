@@ -39,12 +39,14 @@
                 <li><a href="https://www.nytimes.com/2024/06/06/opinion/elites-progressives-universities.html"
                         target="_blank">The Sins of the Educated Class</a> — <em>an interesting take on modern class
                         dynamics</em></li>
-                <li><a href="https://paulgraham.com/greatwork.html" target="_blank">How To Do Great Work</a> — <em>the
+                <!--<li><a href="https://paulgraham.com/greatwork.html" target="_blank">How To Do Great Work</a> — <em>the
                         best of Paul Graham's essays</em></li>
                 <li><a href="https://www.youtube.com/watch?v=njpGH_IHjFg" target="_blank">Create More Value Than You
-                        Capture</a> — <em>Tim O'Reilly on ensuring continued business success</em></li>
+                        Capture</a> — <em>Tim O'Reilly on ensuring continued business success</em></li>-->
                 <li><a href="https://users.ece.cmu.edu/~gamvrosi/thelastq.html" target="_blank">The Last Question</a> —
-                    <em>a moving (and telling) short story by Isaac Asimov</em>
+                    <em>a moving (and telling) short story by Isaac Asimov</em></li>
+                <li><a href="https://highagency.com/" target="_blank">highagency.com</a> —
+                    <em>self-explanatory; on high agency</em>
                 </li>
             </ul>
         </section>
@@ -53,7 +55,8 @@
             <h2>Socials</h2>
             <p><a href="https://www.linkedin.com/in/lucaviness/" target="_blank">LinkedIn</a>
                 <a href="https://x.com/lucaviness" target="_blank">X</a>
-                <a href="https://www.instagram.com/lucaviness/" target="_blank">Instagram</a>
+                <!--<a href="https://www.instagram.com/lucaviness/" target="_blank">Instagram</a>-->
+                <a href="https://www.goodreads.com/user/show/178709515-luca-caviness" target="_blank">Goodreads</a>
             </p>
             <p>Email me: <a href="mailto:lucacaviness@gmail.com">lucacaviness@gmail.com</a></p>
         </section>
@@ -77,7 +80,7 @@
             const data = await response.json();
 
             const postsContainer = document.getElementById('substack-posts');
-            data.items.slice(0, 7).forEach(post => {
+            data.items.slice(0, 3).forEach(post => {
                 const postElement = document.createElement('li');
                 postElement.className = 'post';
                 postElement.innerHTML = `
