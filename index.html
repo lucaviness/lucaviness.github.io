@@ -36,25 +36,22 @@
             <h2>Bookmarks</h2>
             <ul>
                 <li><a href="https://www.nytimes.com/2024/06/06/opinion/elites-progressives-universities.html"
-                    target="_blank">The Sins of the Educated Class</a> — <em>on modern class dynamics</em></li>
-                <li><a href="https://www.henrikkarlsson.xyz/p/looking-for-alice" 
-                    target="_blank">Looking for Alice</a> — <em>on dating</em></li>
+                        target="_blank">The Sins of the Educated Class</a> — <em>on modern class dynamics</em></li>
+                <li><a href="https://www.henrikkarlsson.xyz/p/looking-for-alice" target="_blank">Looking for Alice</a> —
+                    <em>on dating</em>
+                </li>
             </ul>
         </section>
 
         <section id="socials">
             <h2>Find me</h2>
-            <p> 
+            <p>
                 <a href="https://www.linkedin.com/in/lucaviness/" target="_blank">LinkedIn</a>
                 <a href="https://x.com/lucaviness" target="_blank">X</a>
                 <a href="https://lucandjeremi.substack.com/" target="_blank">Newsletter</a>
             </p>
             <p>Email me: <a href="mailto:lucacaviness@gmail.com">lucacaviness@gmail.com</a></p>
         </section>
-
-        <!--<br>
-        
-        <div id="custom-substack-embed"></div>-->
 
         <br>
     </main>
@@ -72,7 +69,7 @@
                 //const options = { year: 'numeric', month: 'long', day: 'numeric' };
                 const options = { month: 'long', day: 'numeric' };
                 const formattedDate = date.toLocaleDateString('en-US', options);
-                
+
                 postElement.innerHTML = `
                     <a href="${post.link}" target="_blank">${post.title}</a> (${formattedDate})
                 `;
@@ -82,22 +79,6 @@
 
         fetchSubstackPosts();
     </script>
-
-    <script>
-        window.CustomSubstackWidget = {
-            substackUrl: "lucandjeremi.substack.com",
-            placeholder: "Email address",
-            buttonText: "Subscribe",
-            theme: "custom",
-            colors: {
-            primary: "#000000",
-            input: "#FFFFFF",
-            email: "#000000",
-            text: "#FFFFFF",
-            },
-        };
-    </script>
-    <script src="https://substackapi.com/widget.js" async></script>
 
 </body>
 
