@@ -19,6 +19,11 @@
     </header>
 
     <main>
+        <section id="newsletter">
+            <h2>Latest newsletter</h2>
+            <ul id="substack-posts"></ul>
+        </section>
+
         <!--<section id="essays">
             <h2>Essays</h2>
             <ul>
@@ -26,51 +31,29 @@
             </ul>
         </section>-->
 
-        <section id="newsletter">
-            <h2>Latest newsletters</h2>
-            <ul id="substack-posts"></ul>
-        </section>
-
         <section id="internet">
-            <h2>Internet favorites</h2>
+            <h2>Bookmarks</h2>
             <ul>
-                <li><a href="https://icaodle.github.io/icaodle/" target="_blank">icaodle.com</a> — <em>a "wordle for
-                        airport codes" game I built in high school (not mobile-friendly)</em></li>
                 <li><a href="https://www.nytimes.com/2024/06/06/opinion/elites-progressives-universities.html"
-                        target="_blank">The Sins of the Educated Class</a> — <em>an interesting take on modern class
-                        dynamics</em></li>
-                <!--<li><a href="https://paulgraham.com/greatwork.html" target="_blank">How To Do Great Work</a> — <em>the
-                        best of Paul Graham's essays</em></li>
-                <li><a href="https://www.youtube.com/watch?v=njpGH_IHjFg" target="_blank">Create More Value Than You
-                        Capture</a> — <em>Tim O'Reilly on ensuring continued business success</em></li>-->
-                <li><a href="https://users.ece.cmu.edu/~gamvrosi/thelastq.html" target="_blank">The Last Question</a> —
-                    <em>a moving (and telling) short story by Isaac Asimov</em></li>
-                <li><a href="https://highagency.com/" target="_blank">highagency.com</a> —
-                    <em>self-explanatory; re: high agency</em></li>
-                <li><a href="https://www.henrikkarlsson.xyz/p/looking-for-alice" target="_blank">Looking for Alice</a> —
-                    <em>maybe the best piece I've read on dating</em></li>
+                    target="_blank">The Sins of the Educated Class</a> — <em>on modern class dynamics</em></li>
+                <li><a href="https://www.henrikkarlsson.xyz/p/looking-for-alice" 
+                    target="_blank">Looking for Alice</a> — <em>on dating</em></li>
             </ul>
         </section>
 
         <section id="socials">
             <h2>Find me</h2>
-            <p><a href="https://www.linkedin.com/in/lucaviness/" target="_blank">LinkedIn</a>
+            <p> 
+                <a href="https://lucandjeremi.substack.com/" target="_blank">Newsletter</a>
                 <a href="https://x.com/lucaviness" target="_blank">X</a>
-                <!--<a href="https://www.instagram.com/lucaviness/" target="_blank">Instagram</a>-->
-                <a href="https://www.goodreads.com/user/show/178709515-luca-caviness" target="_blank">Goodreads</a>
+                <a href="https://www.linkedin.com/in/lucaviness/" target="_blank">LinkedIn</a>
             </p>
             <p>Email me: <a href="mailto:lucacaviness@gmail.com">lucacaviness@gmail.com</a></p>
         </section>
 
-        <!--<section id="story">
-            <h2>My life so far...</h2>
-            <p><span class="highlight">ages 0-11:</span> Learned my ABCs and asked a lot of questions.</p>
-            <p><span class="highlight">ages 11-15:</span> Homeschooled, argued every chance I got, aggressively into
-                math.</p>
-            <p><span class="highlight">ages 15-18:</span> Covid, got obsessed with flight simulators, earned my pilot
-                license.</p>
-            <p><span class="highlight">ages 18-19:</span> Going to school at Berkeley, more to come...</p>
-        </section>-->
+        <!--<br>
+        
+        <div id="custom-substack-embed"></div>-->
 
         <br>
     </main>
@@ -81,18 +64,39 @@
             const data = await response.json();
 
             const postsContainer = document.getElementById('substack-posts');
-            data.items.slice(0, 3).forEach(post => {
+            data.items.slice(0, 1).forEach(post => {
                 const postElement = document.createElement('li');
                 postElement.className = 'post';
+                const date = new Date(post.pubDate);
+                //const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                const options = { month: 'long', day: 'numeric' };
+                const formattedDate = date.toLocaleDateString('en-US', options);
+                
                 postElement.innerHTML = `
-                <a href="${post.link}" target="_blank">${post.title}</a>
-            `;
+                    <a href="${post.link}" target="_blank">${post.title}</a> (${formattedDate})
+                `;
                 postsContainer.appendChild(postElement);
             });
         }
 
         fetchSubstackPosts();
     </script>
+
+    <script>
+        window.CustomSubstackWidget = {
+            substackUrl: "lucandjeremi.substack.com",
+            placeholder: "Email address",
+            buttonText: "Subscribe",
+            theme: "custom",
+            colors: {
+            primary: "#000000",
+            input: "#FFFFFF",
+            email: "#000000",
+            text: "#FFFFFF",
+            },
+        };
+    </script>
+    <script src="https://substackapi.com/widget.js" async></script>
 
 </body>
 
