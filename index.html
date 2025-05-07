@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="lucaviness.com">
     <title>lucaviness.com</title>
     <link rel="icon" href="files/plane-solid.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
@@ -13,72 +14,57 @@
 <body>
 
     <header>
-        <img src="files/headshot.jpeg" alt="Luca Caviness Headshot" class="headshot">
+        <img src="files/headshot.jpeg" alt="Luca Caviness Headshot" class="headshot" width="150" height="150">
         <h1>Luca Caviness</h1>
         <p>Operations research and public policy at Cal</p>
     </header>
 
     <main>
-        <section id="newsletter">
-            <h2>Latest newsletter</h2>
+        <section id="newsletter" aria-labelledby="newsletter-heading">
+            <h2 id="newsletter-heading">Latest newsletter <a href="https://lucandjeremi.substack.com/welcome" target="_blank" rel="noopener noreferrer" class="subscribe-link">(Subscribe →)</a></h2>
             <ul id="substack-posts"></ul>
         </section>
 
-        <!--<section id="essays">
-            <h2>Essays</h2>
+        <!--<section id="essays" aria-labelledby="essays-heading">
+            <h2 id="essays-heading">Writings</h2>
             <ul>
                 <li>Coming soon...</li>
                 <li><a href="essay.html">Re: Summer 2025</a></li>
             </ul>
         </section>-->
 
-        <section id="internet">
-            <h2>Bookmarks</h2>
+        <!--<section id="internet" aria-labelledby="bookmarks-heading">
+            <h2 id="bookmarks-heading">Bookmarks</h2>
             <ul>
-                <li><a href="https://www.nytimes.com/2024/06/06/opinion/elites-progressives-universities.html"
-                        target="_blank">The Sins of the Educated Class</a> — <em>on modern class dynamics</em></li>
-                <li><a href="https://www.henrikkarlsson.xyz/p/looking-for-alice" target="_blank">Looking for Alice</a> —
-                    <em>on dating</em>
+                <li>
+                    <a href="https://www.nytimes.com/2024/06/06/opinion/elites-progressives-universities.html" 
+                       target="_blank" 
+                       rel="noopener noreferrer">The Sins of the Educated Class</a> 
+                    — <em>on modern class dynamics</em>
+                </li>
+                <li>
+                    <a href="https://www.henrikkarlsson.xyz/p/looking-for-alice" 
+                       target="_blank" 
+                       rel="noopener noreferrer">Looking for Alice</a> 
+                    — <em>on dating</em>
                 </li>
             </ul>
-        </section>
+        </section>-->
 
-        <section id="socials">
-            <h2>Find me</h2>
-            <p>
-                <a href="https://www.linkedin.com/in/lucaviness/" target="_blank">LinkedIn</a>
-                <a href="https://x.com/lucaviness" target="_blank">X</a>
-                <a href="https://lucandjeremi.substack.com/" target="_blank">Newsletter</a>
-            </p>
+        <section id="socials" aria-labelledby="socials-heading">
+            <h2 id="socials-heading">Find me</h2>
+            <nav>
+                <a href="https://www.linkedin.com/in/lucaviness/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://x.com/lucaviness" target="_blank" rel="noopener noreferrer">X</a>
+                <a href="https://lucandjeremi.substack.com/" target="_blank" rel="noopener noreferrer">Newsletter</a>
+            </nav>
             <p>Email me: <a href="mailto:lucacaviness@gmail.com">lucacaviness@gmail.com</a></p>
         </section>
 
         <br>
     </main>
 
-    <script>
-        async function fetchSubstackPosts() {
-            const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://lucandjeremi.substack.com/feed');
-            const data = await response.json();
-
-            const postsContainer = document.getElementById('substack-posts');
-            data.items.slice(0, 1).forEach(post => {
-                const postElement = document.createElement('li');
-                postElement.className = 'post';
-                const date = new Date(post.pubDate);
-                //const options = { year: 'numeric', month: 'long', day: 'numeric' };
-                const options = { month: 'long', day: 'numeric' };
-                const formattedDate = date.toLocaleDateString('en-US', options);
-
-                postElement.innerHTML = `
-                    <a href="${post.link}" target="_blank">${post.title}</a> (${formattedDate})
-                `;
-                postsContainer.appendChild(postElement);
-            });
-        }
-
-        fetchSubstackPosts();
-    </script>
+    <script src="js/substack.js"></script>
 
 </body>
 
