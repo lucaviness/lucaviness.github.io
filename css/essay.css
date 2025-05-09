@@ -45,3 +45,16 @@ ol li {
   margin-bottom: 0.75em;
   color: #000;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  }
+}
