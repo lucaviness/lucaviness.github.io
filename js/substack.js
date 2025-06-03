@@ -30,7 +30,7 @@ async function fetchSubstackPosts() {
         const formattedDate = date.toLocaleDateString('en-US', options);
 
         postElement.innerHTML = `
-            ${formattedDate}: <a href="${latestPost.link}" target="_blank" rel="noopener noreferrer">${latestPost.title}</a>
+            ${formattedDate}: <a href="${latestPost.link}" rel="noopener noreferrer">${latestPost.title}</a>
         `;
         
         postsContainer.appendChild(postElement);
