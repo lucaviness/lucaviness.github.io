@@ -45,15 +45,20 @@ async function loadSubstackPosts() {
     }
 
     // Try to load cached post first
-    const cachedPost = localStorage.getItem('latestSubstackPost');
-    if (cachedPost) {
+    const cachedPostData = localStorage.getItem('latestSubstackPost');
+    let hasCachedPost = false;
+    
+    if (cachedPostData) {
         try {
-            const post = JSON.parse(cachedPost);
+            const post = JSON.parse(cachedPostData);
             displayPost(post, postsContainer);
+            hasCachedPost = true;
         } catch (error) {
             console.error('Error parsing cached post:', error);
         }
-    } else {
+    }
+    
+    if (!hasCachedPost) {
         // Show loading if no cache
         postsContainer.innerHTML = '<li>Loading...</li>';
     }
@@ -63,12 +68,11 @@ async function loadSubstackPosts() {
     
     if (latestPost) {
         // Check if this is newer than cached post
-        const cachedPost = localStorage.getItem('latestSubstackPost');
         let shouldUpdate = true;
         
-        if (cachedPost) {
+        if (cachedPostData) {
             try {
-                const cached = JSON.parse(cachedPost);
+                const cached = JSON.parse(cachedPostData);
                 const cachedDate = new Date(cached.pubDate);
                 const latestDate = new Date(latestPost.pubDate);
                 shouldUpdate = latestDate > cachedDate;
@@ -82,7 +86,7 @@ async function loadSubstackPosts() {
             localStorage.setItem('latestSubstackPost', JSON.stringify(latestPost));
             displayPost(latestPost, postsContainer);
         }
-    } else if (!cachedPost) {
+    } else if (!hasCachedPost) {
         // Only show error if we don't have cached content
         postsContainer.innerHTML = '<li>Unable to load latest post</li>';
     }
