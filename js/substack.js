@@ -67,25 +67,9 @@ async function loadSubstackPosts() {
     const latestPost = await fetchLatestPost();
     
     if (latestPost) {
-        // Check if this is newer than cached post
-        let shouldUpdate = true;
-        
-        if (cachedPostData) {
-            try {
-                const cached = JSON.parse(cachedPostData);
-                const cachedDate = new Date(cached.pubDate);
-                const latestDate = new Date(latestPost.pubDate);
-                shouldUpdate = latestDate > cachedDate;
-            } catch (error) {
-                console.error('Error comparing posts:', error);
-            }
-        }
-        
-        if (shouldUpdate) {
-            // Update cache and display
-            localStorage.setItem('latestSubstackPost', JSON.stringify(latestPost));
-            displayPost(latestPost, postsContainer);
-        }
+        // Always update cache and display with the latest post from API
+        localStorage.setItem('latestSubstackPost', JSON.stringify(latestPost));
+        displayPost(latestPost, postsContainer);
     } else if (!hasCachedPost) {
         // Only show error if we don't have cached content
         postsContainer.innerHTML = '<li>Unable to load latest post</li>';
