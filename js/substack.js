@@ -22,7 +22,9 @@ function displayPost(post, container) {
  */
 async function fetchLatestPost() {
     try {
-        const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://lucandjeremi.substack.com/feed');
+        // Add cache-busting parameter to ensure we get the latest data
+        const timestamp = Date.now();
+        const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://lucandjeremi.substack.com/feed&t=${timestamp}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
