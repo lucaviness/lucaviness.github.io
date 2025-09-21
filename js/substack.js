@@ -67,6 +67,8 @@ async function loadSubstackPosts() {
     // Fetch latest post from API
     const latestPost = await fetchLatestPost();
     
+    console.log('API response:', latestPost);
+    
     if (latestPost) {
         // Check if the latest post is newer than the cached post
         let shouldUpdate = false;
@@ -78,6 +80,15 @@ async function loadSubstackPosts() {
             // Compare publication dates
             const cachedDate = new Date(cachedPost.pubDate);
             const latestDate = new Date(latestPost.pubDate);
+            
+            console.log('Date comparison debug:', {
+                cachedPost: cachedPost.title,
+                cachedDate: cachedDate.toISOString(),
+                latestPost: latestPost.title,
+                latestDate: latestDate.toISOString(),
+                isNewer: latestDate > cachedDate,
+                shouldUpdate: latestDate > cachedDate
+            });
             
             if (latestDate > cachedDate) {
                 shouldUpdate = true;
