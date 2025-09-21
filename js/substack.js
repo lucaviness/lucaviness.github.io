@@ -18,18 +18,75 @@ function displayPost(post, container) {
 }
 
 /**
- * Fetches the latest Substack post from API
+ * Fetches the latest Substack post from RSS feed
  */
 async function fetchLatestPost() {
     try {
+        // Try RSS2JSON first
         const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://lucandjeremi.substack.com/feed');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        return data.items[0] || null;
+        
+        // Check if we got a recent post (within last 7 days)
+        if (data.items && data.items.length > 0) {
+            const latestPost = data.items[0];
+            const postDate = new Date(latestPost.pubDate);
+            const now = new Date();
+            const daysDiff = (now - postDate) / (1000 * 60 * 60 * 24);
+            
+            // If the post is recent (within 7 days), use it
+            if (daysDiff <= 7) {
+                return latestPost;
+            }
+        }
+        
+        // If RSS2JSON doesn't have recent posts, try parsing RSS directly
+        console.log('RSS2JSON may be outdated, trying direct RSS parsing...');
+        return await fetchLatestPostFromRSS();
+        
     } catch (error) {
-        console.error('Error fetching Substack posts:', error);
+        console.error('Error fetching from RSS2JSON, trying direct RSS:', error);
+        return await fetchLatestPostFromRSS();
+    }
+}
+
+/**
+ * Fetches the latest post by parsing RSS feed directly
+ */
+async function fetchLatestPostFromRSS() {
+    try {
+        const response = await fetch('https://lucandjeremi.substack.com/feed');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const xmlText = await response.text();
+        
+        // Parse the RSS XML to get the latest post
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        
+        const items = xmlDoc.querySelectorAll('item');
+        if (items.length === 0) {
+            return null;
+        }
+        
+        const latestItem = items[0];
+        const title = latestItem.querySelector('title')?.textContent || '';
+        const link = latestItem.querySelector('link')?.textContent || '';
+        const pubDate = latestItem.querySelector('pubDate')?.textContent || '';
+        const description = latestItem.querySelector('description')?.textContent || '';
+        
+        return {
+            title: title,
+            link: link,
+            pubDate: pubDate,
+            description: description
+        };
+        
+    } catch (error) {
+        console.error('Error fetching from direct RSS:', error);
         return null;
     }
 }
