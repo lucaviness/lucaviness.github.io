@@ -7,9 +7,9 @@
 
 :root {
   /* Color Variables */
-  --color-text: #666666;
+  --color-text: #8a8a8a;
   --color-text-light: #666666;
-  --color-link: #2c5aa0;
+  --color-link: #335b97;
   --color-link-hover-bg: transparent;
   --color-link-underline: transparent;
   --color-link-underline-hover: #b3d9ff;
@@ -124,29 +124,14 @@ section li {
 a {
   color: var(--color-link);
   text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   font-weight: 500;
-}
-
-a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
-  height: 1px;
-  background-color: var(--color-link-underline);
-  transition: background-color 0.3s ease;
 }
 
 a:hover {
   color: var(--color-link);
-  background-color: transparent;
-}
-
-a:hover::after {
-  background-color: var(--color-link-underline-hover);
+  background-color: #e3f2fd;
+  text-decoration: underline;
 }
 
 /* Selection Style - removed */
