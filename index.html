@@ -5,24 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="lucaviness.com">
-    <title>Luca Caviness</title>
-    <link rel="icon" href="files/plane-solid.png" type="image/png">
+    <title>lucaviness.com</title>
+    <link rel="icon" href="files/american-flag.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/c7de4664b1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div class="container">
+        <header>
+            <h1>Luca Caviness</h1>
+            <p>Operations research and public policy student at UC Berkeley, private pilot. Based in the Bay Area.</p>
+            <p>Interested in aerospace, defense, and national security.</p>
+        </header>
 
-    <header>
-        <img src="files/headshot.jpeg" alt="Luca Caviness Headshot" class="headshot" width="150" height="150">
-        <h1>Luca Caviness</h1>
-        <p>Operations research and public policy at Cal</p>
-    </header>
-
-    <main>
+        <main>
         <section id="newsletter" aria-labelledby="newsletter-heading">
-            <h2 id="newsletter-heading">Latest newsletter <a href="https://lucandjeremi.substack.com/welcome" target="_blank" rel="noopener noreferrer" class="subscribe-link">(Subscribe →)</a></h2>
-            <ul id="substack-posts">Loading...</ul>
+            <h2 id="newsletter-heading">Newsletter</h2>
+            <p><a href="https://jereminuer.com" target="_blank" rel="noopener noreferrer">Jeremi Nuer</a> 
+                and I send out a newsletter each Sunday about what we've been learning or doing...</p>
+            <p>Latest: <span id="substack-posts">Loading...</span></p>
+            <div class="substack-embed">
+                <iframe src="https://lucandjeremi.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+            </div>
         </section>
 
         <!--<section id="essays" aria-labelledby="essays-heading">
@@ -51,17 +59,42 @@
             </ul>
         </section>-->
 
-        <section id="socials" aria-labelledby="socials-heading">
-            <h2 id="socials-heading">Find me</h2>
-            <nav>
-                <a href="https://www.linkedin.com/in/lucaviness/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-                <a href="https://x.com/lucaviness" target="_blank" rel="noopener noreferrer">X</a>
-            </nav>
-            <p>Email me: <a href="mailto:lucacaviness@gmail.com" rel="nofollow noopener noreferrer" target="_blank">lucacaviness@gmail.com</a></p>
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Flying</h2>
+            <p>Obsessed with flight sims (IF) in middle school. Tutored to save up money, got 
+                private pilot certificate at 17.</p>
+            <p>Ratings:<br>
+            - Airplane Single-Engine Land (ASEL)<br>
+            - Instrument and seaplane next...</p>
+            <p>Mainly fly 172s around the Bay Area; some favorite destinations: 
+                <a href="https://www.airnav.com/airport/KHAF" target="_blank" rel="noopener noreferrer">Half Moon Bay (HAF)</a>,
+                <a href="https://www.airnav.com/airport/0q5" target="_blank" rel="noopener noreferrer">Shelter Cove (0Q5)</a>,
+                <a href="https://www.airnav.com/airport/1O2" target="_blank" rel="noopener noreferrer">Clear Lake (1O2)</a>,
+                and <a href="https://www.airnav.com/airport/KMRY" target="_blank" rel="noopener noreferrer">Monterey (MRY)</a>.</p>
+            <img src="files/ggbridge.jpg" alt="Golden Gate Bridge from aircraft" style="width: 100%; max-width: 100%; height: auto; margin-top: 1rem; border-radius: 4px;">
         </section>
 
+
         <br>
-    </main>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h2>How to find me</h2>
+            <p>Feel free to follow along on 
+                <a href="https://www.linkedin.com/in/lucaviness/" target="_blank" rel="noopener noreferrer">LinkedIn</a> 
+                and <a href="https://x.com/lucaviness" target="_blank" rel="noopener noreferrer">X</a>. 
+                You can also get in touch via email at 
+                <a href="mailto:lucacaviness@gmail.com" rel="nofollow noopener noreferrer" target="_blank">lucacaviness@gmail.com</a>.</p>
+            <!-- Subscribe embed code -->
+            <div data-supascribe-embed-id="269393638713" data-supascribe-subscribe></div>
+            <div class="footer-line">
+                <span class="footer-left">Berkeley, CA, USA. 2025 –</span>
+                <span class="footer-right"><a href="https://lucaviness.com">lucaviness.com</a></span>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/substack.js"></script>
 
