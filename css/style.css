@@ -9,7 +9,7 @@
   /* Color Variables */
   --color-text: #666666;
   --color-text-light: #666666;
-  --color-link: #3a7bd5;
+  --color-link: #2c5aa0;
   --color-link-hover-bg: transparent;
   --color-link-underline: transparent;
   --color-link-underline-hover: #b3d9ff;
@@ -17,7 +17,7 @@
   --color-selection-text: #ffffff;
   
   /* Typography */
-  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-family-base: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Consolas', monospace;
   --font-size-base: 1rem;
   --line-height-base: 1.6;
   
@@ -29,7 +29,7 @@
   --spacing-xl: 2rem;
   
   /* Layout */
-  --max-width: 525px;
+  --max-width: 550px;
   --border-radius: 50%;
 }
 
@@ -39,7 +39,7 @@ body {
   font-weight: 300;
   line-height: var(--line-height-base);
   color: var(--color-text);
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   margin: 0;
   padding: 0;
 }
@@ -56,7 +56,7 @@ body {
 
 /* Ensure all text elements are the same size */
 h1, h2, h3, h4, h5, h6, p, li, a, span, div {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
 }
 
 /* Bold text should be darker */
@@ -72,7 +72,7 @@ header {
 }
 
 header h1 {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   color: #000000;
   margin-bottom: 0.5rem;
   font-weight: bold;
@@ -80,7 +80,7 @@ header h1 {
 }
 
 header p {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   color: var(--color-text);
   font-weight: 300;
 }
@@ -92,7 +92,7 @@ main {
 
 h2 {
   color: #000000;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   margin: 3rem 0 1rem;
   font-weight: bold;
   border-bottom: 1px solid #eaeaea;
@@ -100,7 +100,7 @@ h2 {
 }
 
 p {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   margin-top: var(--spacing-sm);
   margin-bottom: 0;
   font-weight: 300;
@@ -115,7 +115,7 @@ section ul {
 }
 
 section li {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   margin-bottom: 0.6rem;
   font-weight: 300;
 }
@@ -171,41 +171,57 @@ nav {
   }
   
   body {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-sm) 0.25rem;
+  }
+  
+  .container {
+    padding: 2rem 0.75rem 2rem !important;
+  }
+  
+  b, strong, h1, h2, h3, h4, h5, h6 {
+    font-weight: 700 !important;
   }
 
   header h1 {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
 
   header p {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
   }
 
   h2 {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
   }
 
 }
 
 @media (max-width: 480px) {
   body {
-    padding: var(--spacing-md);
-    font-size: 1.05rem;
+    padding: var(--spacing-sm) 0.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .container {
+    padding: 2rem 0.75rem 2rem !important;
+  }
+  
+  b, strong, h1, h2, h3, h4, h5, h6 {
+    font-weight: 700 !important;
   }
 
   header h1 {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
 
   header p {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
   }
 
   h2 {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     margin: 2rem 0 1rem;
   }
 
@@ -229,6 +245,7 @@ footer {
   padding: 2rem 0;
   width: 100%;
   border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
 }
 
 .footer-content {
@@ -275,7 +292,8 @@ footer {
 }
 
 .substack-embed iframe {
-  max-width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
   height: auto;
 }
 
@@ -356,7 +374,7 @@ footer [data-supascribe-embed-id] div div {
 
 [data-supascribe-embed-id] input[type="email"] {
   font-family: var(--font-family-base) !important;
-  font-size: 1.05rem !important;
+  font-size: 0.9rem !important;
   font-weight: 300 !important;
   padding: 0.5rem;
   border: 1px solid #666666;
@@ -370,14 +388,14 @@ footer [data-supascribe-embed-id] div div {
 }
 
 [data-supascribe-embed-id] input[type="email"]::placeholder {
-  font-size: 1.05rem !important;
+  font-size: 0.9rem !important;
   font-family: var(--font-family-base) !important;
   color: #999999 !important;
 }
 
 [data-supascribe-embed-id] button {
   font-family: var(--font-family-base) !important;
-  font-size: 1.05rem !important;
+  font-size: 0.9rem !important;
   font-weight: bold !important;
   padding: 0.5rem 1rem;
   background: #f0f0f0;
@@ -392,7 +410,7 @@ footer [data-supascribe-embed-id] div div {
 
 [data-supascribe-embed-id] * {
   font-family: var(--font-family-base) !important;
-  font-size: 1.05rem !important;
+  font-size: 0.9rem !important;
 }
 
 [data-supascribe-embed-id] button:hover {
