@@ -2,19 +2,13 @@
  * Displays a post in the container
  */
 function displayPost(post, container) {
-    const postElement = document.createElement('li');
-    postElement.className = 'post';
-    
     const date = new Date(post.pubDate);
-    const options = { month: 'long', day: 'numeric' };
+    const options = { month: '2-digit', day: '2-digit' };
     const formattedDate = date.toLocaleDateString('en-US', options);
 
-    postElement.innerHTML = `
-        ${formattedDate}: <a href="${post.link}" target="_blank" rel="noopener noreferrer">${post.title}</a>
+    container.innerHTML = `
+        <a href="${post.link}" target="_blank" rel="noopener noreferrer">${post.title}</a> (${formattedDate})
     `;
-    
-    container.innerHTML = '';
-    container.appendChild(postElement);
 }
 
 /**
@@ -63,7 +57,7 @@ async function loadSubstackPosts() {
     
     if (!hasCachedPost) {
         // Show loading if no cache
-        postsContainer.innerHTML = '<li>Loading...</li>';
+        postsContainer.innerHTML = 'Loading...';
     }
 
     // Fetch latest post from API
@@ -93,7 +87,7 @@ async function loadSubstackPosts() {
         }
     } else if (!hasCachedPost) {
         // Only show error if we don't have cached content
-        postsContainer.innerHTML = '<li>Unable to load latest post</li>';
+        postsContainer.innerHTML = 'Unable to load latest post';
     }
 }
 
