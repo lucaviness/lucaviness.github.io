@@ -17,7 +17,7 @@
   --color-selection-text: #ffffff;
   
   /* Typography */
-  --font-family-base: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Consolas', monospace;
+  --font-family-base: 'IBM Plex Mono', 'Roboto Mono', 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Consolas', monospace;
   --font-size-base: 1rem;
   --line-height-base: 1.6;
   
@@ -36,7 +36,7 @@
 /* Base Styles */
 body {
   font-family: var(--font-family-base);
-  font-weight: 300;
+  font-weight: 400;
   line-height: var(--line-height-base);
   color: var(--color-text);
   font-size: 0.9rem;
@@ -82,7 +82,7 @@ header h1 {
 header p {
   font-size: 0.9rem;
   color: var(--color-text);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Main Content */
@@ -103,7 +103,7 @@ p {
   font-size: 0.9rem;
   margin-top: var(--spacing-sm);
   margin-bottom: 0;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* List Styles */
@@ -117,7 +117,7 @@ section ul {
 section li {
   font-size: 0.9rem;
   margin-bottom: 0.6rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Link Styles */
@@ -165,7 +165,7 @@ a:hover {
     outline: none;
     font-family: var(--font-family-base);
     font-size: 0.9rem;
-    font-weight: 300;
+    font-weight: 400;
     background: white;
     color: var(--color-text);
 }
