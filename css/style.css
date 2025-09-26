@@ -7,7 +7,7 @@
 
 :root {
   /* Color Variables */
-  --color-text: #8a8a8a;
+  --color-text: #6a6a6a;
   --color-text-light: #666666;
   --color-link: #335b97;
   --color-link-hover-bg: transparent;
@@ -137,6 +137,128 @@ a:hover {
 /* Selection Style - removed */
 
 /* Profile Image - removed */
+
+/* Newsletter Component Styles */
+.newsletter-component {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.newsletter-form {
+    width: 100%;
+}
+
+.newsletter-input-group {
+    display: flex;
+    gap: 0;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    background: white;
+}
+
+.newsletter-email {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    outline: none;
+    font-family: var(--font-family-base);
+    font-size: 0.9rem;
+    font-weight: 300;
+    background: white;
+    color: var(--color-text);
+}
+
+.newsletter-email::placeholder {
+    color: #999999;
+    font-family: var(--font-family-base);
+    font-size: 0.9rem;
+}
+
+.newsletter-email:focus {
+    background: #fafafa;
+}
+
+.newsletter-email:disabled {
+    background: #f5f5f5;
+    color: #999999;
+    cursor: not-allowed;
+}
+
+.newsletter-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: #f0f0f0;
+    color: #000000;
+    font-family: var(--font-family-base);
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.newsletter-button:hover:not(:disabled) {
+    background: #e8e8e8;
+}
+
+.newsletter-button:disabled {
+    background: #f5f5f5;
+    color: #999999;
+    cursor: not-allowed;
+}
+
+.newsletter-message {
+    margin-top: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.newsletter-message.success {
+    background: #e8f5e8;
+    color: #2d5a2d;
+    border: 1px solid #c8e6c8;
+}
+
+.newsletter-message.error {
+    background: #ffeaea;
+    color: #d32f2f;
+    border: 1px solid #ffcdd2;
+}
+
+/* Footer newsletter component */
+#footer-newsletter-subscription {
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+#footer-newsletter-subscription .newsletter-component {
+    margin-top: 0;
+}
+
+/* Mobile responsiveness for newsletter */
+@media (max-width: 768px) {
+    .newsletter-input-group {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .newsletter-email,
+    .newsletter-button {
+        border-radius: 0;
+    }
+    
+    .newsletter-email {
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .newsletter-button {
+        border-radius: 0 0 6px 6px;
+    }
+}
 
 /* Utility Classes */
 .highlight {
