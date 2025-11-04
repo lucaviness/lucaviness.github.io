@@ -17,7 +17,7 @@
   --color-selection-text: #ffffff;
   
   /* Typography */
-  --font-family-base: 'IBM Plex Mono', 'Roboto Mono', 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Consolas', monospace;
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   --font-size-base: 1rem;
   --line-height-base: 1.6;
   
@@ -39,7 +39,7 @@ body {
   font-weight: 400;
   line-height: var(--line-height-base);
   color: var(--color-text);
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
 }
@@ -56,7 +56,7 @@ body {
 
 /* Ensure all text elements are the same size */
 h1, h2, h3, h4, h5, h6, p, li, a, span, div {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 /* Bold text should be darker */
@@ -72,7 +72,7 @@ header {
 }
 
 header h1 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #000000;
   margin-bottom: 0.5rem;
   font-weight: bold;
@@ -80,7 +80,7 @@ header h1 {
 }
 
 header p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--color-text);
   font-weight: 400;
 }
@@ -92,7 +92,7 @@ main {
 
 h2 {
   color: #000000;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 3rem 0 1rem;
   font-weight: bold;
   border-bottom: 1px solid #eaeaea;
@@ -100,7 +100,7 @@ h2 {
 }
 
 p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-top: var(--spacing-sm);
   margin-bottom: 0;
   font-weight: 400;
@@ -115,7 +115,7 @@ section ul {
 }
 
 section li {
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 0.6rem;
   font-weight: 400;
 }
@@ -164,7 +164,7 @@ a:hover {
     border: none;
     outline: none;
     font-family: var(--font-family-base);
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 400;
     background: white;
     color: var(--color-text);
@@ -173,7 +173,7 @@ a:hover {
 .newsletter-email::placeholder {
     color: #999999;
     font-family: var(--font-family-base);
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .newsletter-email:focus {
@@ -192,7 +192,7 @@ a:hover {
     background: #f0f0f0;
     color: #000000;
     font-family: var(--font-family-base);
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -290,16 +290,16 @@ nav {
   }
 
   header h1 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
   }
 
   header p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   h2 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
 }
@@ -307,7 +307,7 @@ nav {
 @media (max-width: 480px) {
   body {
     padding: var(--spacing-sm) 0.25rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   
   .container {
@@ -319,16 +319,16 @@ nav {
   }
 
   header h1 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
   }
 
   header p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   h2 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin: 2rem 0 1rem;
   }
 
@@ -341,7 +341,7 @@ nav {
 
 /* Newsletter */
 .subscribe-link {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: normal;
   color: var(--color-text-light);
 }
@@ -481,7 +481,7 @@ footer [data-supascribe-embed-id] div div {
 
 [data-supascribe-embed-id] input[type="email"] {
   font-family: var(--font-family-base) !important;
-  font-size: 0.9rem !important;
+  font-size: 1rem !important;
   font-weight: 300 !important;
   padding: 0.5rem;
   border: 1px solid #666666;
@@ -495,14 +495,14 @@ footer [data-supascribe-embed-id] div div {
 }
 
 [data-supascribe-embed-id] input[type="email"]::placeholder {
-  font-size: 0.9rem !important;
+  font-size: 1rem !important;
   font-family: var(--font-family-base) !important;
   color: #999999 !important;
 }
 
 [data-supascribe-embed-id] button {
   font-family: var(--font-family-base) !important;
-  font-size: 0.9rem !important;
+  font-size: 1rem !important;
   font-weight: bold !important;
   padding: 0.5rem 1rem;
   background: #f0f0f0;
@@ -517,7 +517,7 @@ footer [data-supascribe-embed-id] div div {
 
 [data-supascribe-embed-id] * {
   font-family: var(--font-family-base) !important;
-  font-size: 0.9rem !important;
+  font-size: 1rem !important;
 }
 
 [data-supascribe-embed-id] button:hover {
