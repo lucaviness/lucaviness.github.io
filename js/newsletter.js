@@ -68,7 +68,7 @@ class NewsletterSubscription {
         event.preventDefault();
         
         const emailInput = this.container.querySelector('.newsletter-email');
-        const email = emailInput.value;
+        const email = emailInput ? emailInput.value : '';
         
         console.log('Form submitted with email:', email);
         
@@ -79,6 +79,7 @@ class NewsletterSubscription {
         }
 
         console.log('Starting subscription process...');
+        this.state.email = email; // Preserve email in state
         this.setState({ isLoading: true, message: null });
 
         try {
@@ -88,9 +89,8 @@ class NewsletterSubscription {
             
             if (response.success) {
                 console.log('Subscription successful');
+                this.state.email = ''; // Clear email for next render
                 this.showMessage(response.message, true);
-                emailInput.value = ''; // Clear form on success
-                this.state.email = '';
             } else {
                 console.log('Subscription failed:', response.error);
                 this.showMessage(response.error || 'Something went wrong. Please try again.', false);
@@ -114,12 +114,10 @@ class NewsletterSubscription {
      * @param {boolean} isSuccess
      */
     showMessage(message, isSuccess) {
-        const messageEl = this.container.querySelector('.newsletter-message');
-        if (messageEl) {
-            messageEl.textContent = message;
-            messageEl.className = `newsletter-message ${isSuccess ? 'success' : 'error'}`;
-            messageEl.style.display = 'block';
-        }
+        this.setState({ 
+            message: message,
+            isSuccess: isSuccess
+        });
     }
 
     /**
@@ -225,7 +223,11 @@ class NewsletterSubscription {
      * Render the component
      */
     render() {
-        const { isLoading } = this.state;
+        const { isLoading, message, isSuccess } = this.state;
+        
+        // Get current email value if input exists
+        const emailInput = this.container.querySelector('.newsletter-email');
+        const currentEmail = emailInput ? emailInput.value : this.state.email;
         
         this.container.innerHTML = `
             <div class="newsletter-component">
@@ -235,6 +237,7 @@ class NewsletterSubscription {
                             type="email" 
                             class="newsletter-email" 
                             placeholder="Enter your email" 
+                            value="${currentEmail || ''}"
                             required
                             ${isLoading ? 'disabled' : ''}
                         />
@@ -247,7 +250,7 @@ class NewsletterSubscription {
                         </button>
                     </div>
                 </form>
-                <div class="newsletter-message" style="display: none;"></div>
+                ${message ? `<div class="newsletter-message ${isSuccess ? 'success' : 'error'}">${message}</div>` : ''}
             </div>
         `;
 
