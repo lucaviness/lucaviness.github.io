@@ -307,6 +307,7 @@ nav {
 
   h2 {
     font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
 
 }
@@ -336,7 +337,7 @@ nav {
 
   h2 {
     font-size: 1rem;
-    margin: 2rem 0 1rem;
+    margin: 2rem 0 0.5rem;
   }
 
   header h1,
