@@ -273,15 +273,6 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Main newsletter subscription container not found!');
     }
     
-    // Initialize footer newsletter component
-    const footerContainer = document.getElementById('footer-newsletter-subscription');
-    if (footerContainer) {
-        console.log('Initializing footer newsletter component...');
-        new NewsletterSubscription('footer-newsletter-subscription');
-    } else {
-        console.error('Footer newsletter subscription container not found!');
-    }
-    
     // Add debug test function to window for manual testing
     window.testNewsletterAPI = async function(email = 'test@example.com') {
         console.log('Testing newsletter API with iframe method for email:', email);

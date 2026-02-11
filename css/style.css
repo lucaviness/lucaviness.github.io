@@ -169,10 +169,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Selection Style - use browser default */
-
-/* Profile Image - removed */
-
 /* Experience Links */
 #experience p {
     margin-bottom: 0.4rem;
@@ -299,302 +295,27 @@ a:hover {
     border: 1px solid #c0392b;
 }
 
-/* Footer newsletter component */
-#footer-newsletter-subscription {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-#footer-newsletter-subscription .newsletter-component {
-    margin-top: 0;
-}
-
-/* Mobile responsiveness for newsletter */
-@media (max-width: 768px) {
-    .newsletter-input-group {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .newsletter-email,
-    .newsletter-button {
-        border-radius: 0;
-    }
-
-    .newsletter-email {
-        border: 1px solid var(--color-border);
-    }
-
-    .newsletter-button {
-        border-radius: 0;
-    }
-}
-
-/* Utility Classes */
-.highlight {
-  background-color: transparent;
-}
-
-/* Social Links */
-nav {
-  margin-top: var(--spacing-sm);
-  text-align: left;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   :root {
     --max-width: 100%;
   }
-  
+
   body {
     padding: var(--spacing-sm) 0.25rem;
   }
-  
+
   .container {
     padding: 2rem 0.75rem 2rem !important;
   }
-  
-  b, strong, h1, h2, h3, h4, h5, h6 {
-    font-weight: 700 !important;
+
+  .newsletter-input-group {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  header h1 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+  .newsletter-email {
+    border: 1px solid var(--color-border);
   }
-
-  header p {
-    font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
 }
 
-@media (max-width: 480px) {
-  body {
-    padding: var(--spacing-sm) 0.25rem;
-    font-size: 1rem;
-  }
-  
-  .container {
-    padding: 2rem 0.75rem 2rem !important;
-  }
-  
-  b, strong, h1, h2, h3, h4, h5, h6 {
-    font-weight: 700 !important;
-  }
-
-  header h1 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 1rem;
-    margin: 2rem 0 0.5rem;
-  }
-
-  header h1,
-  h2 {
-    font-weight: 500;
-  }
-
-}
-
-/* Newsletter */
-.subscribe-link {
-  font-size: 1rem;
-  font-weight: normal;
-  color: var(--color-text-light);
-}
-
-/* Footer */
-footer {
-  background-color: var(--color-bg);
-  padding: 0 0 2rem 0;
-  width: 100%;
-  border-top: none;
-  border-bottom: none;
-  margin-top: 0;
-}
-
-.footer-content {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg);
-  text-align: left;
-}
-
-.footer-content h2 {
-  margin: 0 0 var(--spacing-sm) 0;
-  border-bottom: none;
-}
-
-.footer-content nav {
-  margin: 0rem 0;
-}
-
-.footer-content p {
-  margin-top: 0;
-  margin-bottom: var(--spacing-sm);
-}
-
-.footer-line {
-  border-top: none;
-  margin-top: 1rem;
-  padding-top: 0;
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem !important;
-  color: var(--color-text-light);
-}
-
-.footer-line span {
-  font-size: 1rem !important;
-}
-
-.footer-line a {
-  font-size: 1rem !important;
-}
-
-.substack-embed {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.substack-embed iframe {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto;
-}
-
-/* Supascribe embed styling */
-[data-supascribe-embed-id] {
-  margin-top: 1rem;
-  text-align: left;
-  width: 100% !important;
-  max-width: 100% !important;
-  display: block !important;
-  background: var(--color-bg) !important;
-  border: none !important;
-  padding: 0 !important;
-  border-radius: 0;
-}
-
-[data-supascribe-embed-id] * {
-  max-width: none !important;
-}
-
-footer [data-supascribe-embed-id] .error,
-footer [data-supascribe-embed-id] .error-message,
-footer [data-supascribe-embed-id] [class*="error"],
-footer [data-supascribe-embed-id] p,
-footer [data-supascribe-embed-id] span:not([class*="form"]):not([class*="input"]):not([class*="button"]) {
-  background: var(--color-bg) !important;
-  color: var(--color-text) !important;
-}
-
-footer [data-supascribe-embed-id] div:not([class*="form"]):not([class*="input"]):not([class*="button"]) {
-  background: var(--color-bg) !important;
-}
-
-footer [data-supascribe-embed-id] {
-  background: var(--color-bg) !important;
-}
-
-footer [data-supascribe-embed-id] > div > div,
-footer [data-supascribe-embed-id] > div > div > div,
-footer [data-supascribe-embed-id] div div {
-  background: var(--color-bg) !important;
-}
-
-[data-supascribe-embed-id] div:not([class*="form"]):not([class*="input"]):not([class*="button"]) {
-  background: transparent !important;
-}
-
-[data-supascribe-embed-id] > div > div,
-[data-supascribe-embed-id] > div > div > div,
-[data-supascribe-embed-id] div div {
-  background: transparent !important;
-}
-
-[data-supascribe-embed-id] > div,
-[data-supascribe-embed-id] div {
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-}
-
-[data-supascribe-embed-id] form,
-[data-supascribe-embed-id] > div,
-[data-supascribe-embed-id] div {
-  width: 100% !important;
-  max-width: 100% !important;
-  display: flex !important;
-  gap: 0;
-  box-sizing: border-box;
-}
-
-[data-supascribe-embed-id] .form-group,
-[data-supascribe-embed-id] div[style*="display"] {
-  flex: 1;
-  display: flex !important;
-  gap: 0.5rem;
-  width: 100%;
-}
-
-[data-supascribe-embed-id] input[type="email"] {
-  font-family: var(--font-family-base) !important;
-  font-size: 1rem !important;
-  font-weight: 400 !important;
-  padding: 0.5rem;
-  border: 1px solid var(--color-border);
-  border-radius: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
-  flex: 1;
-  box-sizing: border-box;
-  width: 100% !important;
-  max-width: none !important;
-}
-
-[data-supascribe-embed-id] input[type="email"]::placeholder {
-  font-size: 1rem !important;
-  font-family: var(--font-family-base) !important;
-  color: var(--color-text-light) !important;
-}
-
-[data-supascribe-embed-id] button {
-  font-family: var(--font-family-base) !important;
-  font-size: 1rem !important;
-  font-weight: normal !important;
-  padding: 0.5rem 1rem;
-  background: var(--color-bg);
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  border-radius: 0;
-  cursor: pointer;
-  margin-left: 0;
-  width: auto;
-  min-width: 120px;
-}
-
-[data-supascribe-embed-id] * {
-  font-family: var(--font-family-base) !important;
-  font-size: 1rem !important;
-}
-
-[data-supascribe-embed-id] button:hover {
-  background: #e8e8e5;
-  color: var(--color-text);
-  border-color: var(--color-text);
-}
