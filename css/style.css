@@ -80,10 +80,46 @@ header h1 {
   line-height: 1.2;
 }
 
+/* Header Badges */
+.header-badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.badge:hover {
+  color: var(--color-text);
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: #bbb;
+}
+
+.badge .inline-logo {
+  margin: 0;
+}
+
 header p {
   font-size: 1rem;
   color: var(--color-text);
   font-weight: 400;
+}
+
+header p:last-child {
+  margin-bottom: 0;
 }
 
 /* Main Content */
@@ -94,7 +130,7 @@ main {
 h2 {
   color: var(--color-text);
   font-size: 1rem;
-  margin: 3rem 0 var(--spacing-sm);
+  margin: 1.5rem 0 var(--spacing-sm);
   font-weight: bold;
   border-bottom: none;
   padding-bottom: 0;
@@ -133,13 +169,39 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Selection Style */
-::selection {
-  background-color: var(--color-selection-bg);
-  color: var(--color-selection-text);
-}
+/* Selection Style - use browser default */
 
 /* Profile Image - removed */
+
+/* Experience Links */
+#experience p {
+    margin-bottom: 0.4rem;
+}
+
+.experience-link {
+    color: var(--color-text);
+    text-decoration: none;
+    display: block;
+    margin: -0.25rem -0.4rem;
+    padding: 0.25rem 0.4rem;
+    border-radius: 0;
+}
+
+.experience-link:hover {
+    color: var(--color-text);
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Inline Logos */
+.inline-logo {
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: middle;
+    margin: 0 0.2em;
+    object-fit: contain;
+    border-radius: 3px;
+}
 
 /* Newsletter Component Styles */
 .newsletter-component {
@@ -181,7 +243,7 @@ a:hover {
 
 .newsletter-email:focus {
     background: var(--color-bg);
-    border: 1px solid var(--color-text);
+    border: 1px solid #bbb;
 }
 
 .newsletter-email:disabled {
@@ -204,9 +266,9 @@ a:hover {
 }
 
 .newsletter-button:hover:not(:disabled) {
-    background: #e8e8e5;
+    background-color: rgba(0, 0, 0, 0.04);
     color: var(--color-text);
-    border-color: var(--color-text);
+    border-color: #bbb;
 }
 
 .newsletter-button:disabled {
@@ -217,23 +279,24 @@ a:hover {
 }
 
 .newsletter-message {
-    margin-top: 0.75rem;
-    padding: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.3rem;
+    padding-left: 0.5rem;
     border-radius: 0;
     font-size: 1rem;
     font-weight: 400;
 }
 
 .newsletter-message.success {
-    background: var(--color-bg);
-    color: var(--color-text);
-    border: 1px solid var(--color-border);
+    background: rgba(39, 174, 96, 0.06);
+    color: #27ae60;
+    border: 1px solid #27ae60;
 }
 
 .newsletter-message.error {
-    background: var(--color-bg);
-    color: var(--color-text);
-    border: 1px solid var(--color-border);
+    background: rgba(192, 57, 43, 0.06);
+    color: #c0392b;
+    border: 1px solid #c0392b;
 }
 
 /* Footer newsletter component */
