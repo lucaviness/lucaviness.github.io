@@ -130,7 +130,7 @@ main {
 h2 {
   color: var(--color-text);
   font-size: 1rem;
-  margin: 1.5rem 0 var(--spacing-sm);
+  margin: 2rem 0 var(--spacing-sm);
   font-weight: bold;
   border-bottom: none;
   padding-bottom: 0;
