@@ -47,6 +47,7 @@ The substack.js module:
 - CSS variables defined in :root for colors, spacing, typography, and layout
 - Mobile-first responsive design with breakpoints at 768px and 480px
 - Newsletter components use gray button styling (#f0f0f0) with hover states
+- **Always use sharp corners (border-radius: 0)** — no rounded corners anywhere on the site
 
 ## Development Workflow
 
