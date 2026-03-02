@@ -134,12 +134,14 @@ section li {
 a {
   color: var(--color-link);
   text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-link) 45%, transparent);
   font-weight: 400;
 }
 
 a:hover {
   color: var(--color-link-hover);
   text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-link-hover) 60%, transparent);
 }
 
 
@@ -151,10 +153,11 @@ a:hover {
 
   body {
     padding: var(--spacing-sm) 0.25rem;
+    font-weight: 300;
   }
 
   .container {
-    padding: 2rem 1.5rem 3rem !important;
+    padding: 2rem 1.1rem 3rem !important;
     margin: 0 auto;
   }
 
