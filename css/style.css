@@ -80,38 +80,6 @@ header h1 {
   line-height: 1.2;
 }
 
-/* Header Badges */
-.header-badges {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: var(--spacing-sm);
-  flex-wrap: wrap;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.4rem 0.6rem;
-  border: 1px solid var(--color-border);
-  border-radius: 0;
-  color: var(--color-text);
-  text-decoration: none;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.badge:hover {
-  color: var(--color-text);
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.04);
-  border-color: #bbb;
-}
-
-.badge .inline-logo {
-  margin: 0;
-  display: block;
-}
 
 header p {
   font-size: 1rem;
@@ -170,131 +138,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Experience Links */
-#experience p {
-    margin-bottom: 0.4rem;
-}
-
-.experience-link {
-    color: var(--color-text);
-    text-decoration: none;
-    display: block;
-    margin: -0.4rem -0.4rem;
-    padding: 0.4rem 0.4rem;
-    border-radius: 0;
-}
-
-.experience-link:hover {
-    color: var(--color-text);
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.04);
-}
-
-/* Inline Logos */
-.inline-logo {
-    width: 1.25em;
-    height: 1.25em;
-    vertical-align: middle;
-    margin: 0 0.2em;
-    object-fit: contain;
-    border-radius: 0;
-}
-
-/* Newsletter Component Styles */
-.newsletter-component {
-    margin-top: 1rem;
-    width: 100%;
-}
-
-.newsletter-form {
-    width: 100%;
-}
-
-.newsletter-input-group {
-    display: flex;
-    gap: 0.5rem;
-    width: 100%;
-    border-radius: 0;
-    overflow: visible;
-    border: none;
-    background: transparent;
-}
-
-.newsletter-email {
-    flex: 1;
-    padding: 0.5rem;
-    border: 1px solid var(--color-border);
-    outline: none;
-    font-family: var(--font-family-base);
-    font-size: 1rem;
-    font-weight: 400;
-    background: var(--color-bg);
-    color: var(--color-text);
-}
-
-.newsletter-email::placeholder {
-    color: var(--color-text-light);
-    font-family: var(--font-family-base);
-    font-size: 1rem;
-}
-
-.newsletter-email:focus {
-    background: var(--color-bg);
-    border: 1px solid #bbb;
-}
-
-.newsletter-email:disabled {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-    cursor: not-allowed;
-    opacity: 0.5;
-}
-
-.newsletter-button {
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--color-border);
-    background: var(--color-bg);
-    color: var(--color-text);
-    font-family: var(--font-family-base);
-    font-size: 1rem;
-    font-weight: normal;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.newsletter-button:hover:not(:disabled) {
-    background-color: rgba(0, 0, 0, 0.04);
-    color: var(--color-text);
-    border-color: #bbb;
-}
-
-.newsletter-button:disabled {
-    background: var(--color-bg);
-    color: var(--color-text-light);
-    cursor: not-allowed;
-    opacity: 0.5;
-}
-
-.newsletter-message {
-    margin-top: 0.5rem;
-    padding: 0.3rem;
-    padding-left: 0.5rem;
-    border-radius: 0;
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-.newsletter-message.success {
-    background: rgba(39, 174, 96, 0.06);
-    color: #27ae60;
-    border: 1px solid #27ae60;
-}
-
-.newsletter-message.error {
-    background: rgba(192, 57, 43, 0.06);
-    color: #c0392b;
-    border: 1px solid #c0392b;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -311,13 +154,5 @@ a:hover {
     margin: 0 auto;
   }
 
-  .newsletter-input-group {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .newsletter-email {
-    border: 1px solid var(--color-border);
-  }
 }
 
