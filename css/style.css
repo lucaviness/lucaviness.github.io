@@ -7,11 +7,11 @@
 
 :root {
   /* Color Variables */
-  --color-bg: #fafaf8;
+  --color-bg: #fefefe;
   --color-text: #2b2b2b;
   --color-text-light: #555555;
-  --color-link: #4a6fa5;
-  --color-link-hover: #3a5785;
+  --color-link: #24508f;
+  --color-link-hover: #1a3f7a;
   --color-border: #d4d4d0;
   --color-selection-bg: #4a6fa5;
   --color-selection-text: #ffffff;
@@ -29,7 +29,7 @@
   --spacing-xl: 2rem;
 
   /* Layout */
-  --max-width: 560px;
+  --max-width: 680px;
   --border-radius: 0;
 }
 
@@ -50,9 +50,9 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: left;
-  padding: 6rem var(--spacing-lg) 2rem;
+  padding: 8rem var(--spacing-lg) 2rem;
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: 0 0 0 15%;
 }
 
 /* Ensure all text elements are the same size */
@@ -92,13 +92,13 @@ header h1 {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.3rem 0.6rem;
+  padding: 0.4rem 0.6rem;
   border: 1px solid var(--color-border);
   border-radius: 0;
   color: var(--color-text);
   text-decoration: none;
   font-size: 1rem;
-  line-height: 1;
+  line-height: 1.6;
 }
 
 .badge:hover {
@@ -110,6 +110,7 @@ header h1 {
 
 .badge .inline-logo {
   margin: 0;
+  display: block;
 }
 
 header p {
@@ -178,8 +179,8 @@ a:hover {
     color: var(--color-text);
     text-decoration: none;
     display: block;
-    margin: -0.25rem -0.4rem;
-    padding: 0.25rem 0.4rem;
+    margin: -0.4rem -0.4rem;
+    padding: 0.4rem 0.4rem;
     border-radius: 0;
 }
 
@@ -196,7 +197,7 @@ a:hover {
     vertical-align: middle;
     margin: 0 0.2em;
     object-fit: contain;
-    border-radius: 3px;
+    border-radius: 0;
 }
 
 /* Newsletter Component Styles */
@@ -307,6 +308,7 @@ a:hover {
 
   .container {
     padding: 2rem 0.75rem 2rem !important;
+    margin: 0 auto;
   }
 
   .newsletter-input-group {
