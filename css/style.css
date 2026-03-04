@@ -157,8 +157,8 @@ a:hover {
 
   body {
     padding: var(--spacing-sm) 0.25rem;
-    font-weight: 300;
   }
+
 
   .container {
     padding: 2rem 1.1rem 3rem !important;
