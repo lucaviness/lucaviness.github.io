@@ -79,9 +79,9 @@ header {
 header h1 {
   font-size: 1rem;
   color: var(--color-text);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 0.4rem;
   font-weight: bold;
-  line-height: 1.2;
+  line-height: var(--line-height-base);
 }
 
 
