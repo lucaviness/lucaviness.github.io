@@ -1,3 +1,36 @@
+/* Jepp — vintage Jeppesen aviation chart typeface (https://sammdot.ca/fonts/jepp/) */
+@font-face {
+  font-family: 'Jepp Sans';
+  src: url('../files/fonts/JeppSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jepp Sans';
+  src: url('../files/fonts/JeppSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jepp Sans Narrow';
+  src: url('../files/fonts/JeppSans-Narrow.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jepp Serif';
+  src: url('../files/fonts/JeppSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* CSS Reset and Base Styles */
 * {
   margin: 0;
@@ -21,7 +54,7 @@ html {
   --color-selection-text: #ffffff;
 
   /* Typography */
-  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-family-base: 'Jepp Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   --font-size-base: 0.925rem;
   --line-height-base: 1.6;
 
@@ -82,6 +115,7 @@ header h1 {
   margin-bottom: 0.4rem;
   font-weight: bold;
   line-height: var(--line-height-base);
+  text-transform: uppercase;
 }
 
 
