@@ -39,7 +39,7 @@
 }
 
 html {
-  font-size: 93.75%;
+  font-size: 87.5%;
 }
 
 :root {
@@ -78,6 +78,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   font-size: 1rem;
+  letter-spacing: 0.015em;
   margin: 0;
   padding: 0;
 }
@@ -116,6 +117,11 @@ header h1 {
   font-weight: bold;
   line-height: var(--line-height-base);
   text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+header h1 .kern-av {
+  letter-spacing: -0.06em;
 }
 
 
